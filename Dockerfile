@@ -9,7 +9,7 @@ RUN   apt-get update && \
 
 COPY  odbc.ini /etc/odbc.ini
 
-ENV TZ=Europe/Moscow
+ENV TZ=UTC
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 USER clickhouse
